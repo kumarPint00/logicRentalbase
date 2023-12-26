@@ -123,7 +123,7 @@ function Navbar(props: any) {
                 Login
               </Button>
               <Button className="bookCarBtn" variant="contained" size="small">
-                BOOK A CAR
+                BOOK
               </Button>
             </Box>
           </Toolbar>
