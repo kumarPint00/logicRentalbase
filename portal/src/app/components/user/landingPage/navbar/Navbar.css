@@ -20,3 +20,15 @@
     text-transform: capitalize !important;
     color: #013049 !important;
 }
+
+.language {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.currency {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}

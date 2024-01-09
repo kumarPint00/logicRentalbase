@@ -12,7 +12,7 @@ const Footer = () => {
     <section className="footer">
       <Container maxWidth="lg">
         <Grid container spacing={4}>
-          <Grid item xs={6} sm={2.4} md={2.4} lg={2.4}>
+          <Grid item xs={12} sm={2.4} md={2.4} lg={2.4}>
             <div className="footerLogo">
               <img src="./footerLogo2.png" alt="logicLogo" />
             </div>
@@ -51,7 +51,7 @@ const Footer = () => {
               </ul>
             </div>
           </Grid>
-          <Grid item xs={12} sm={2.4} md={2.4} lg={2.4}>
+          <Grid item xs={6} sm={2.4} md={2.4} lg={2.4}>
             <div className="ourServices">
               <h3>Follow Us</h3>
               <div className="footerIcons">

@@ -4,6 +4,7 @@ import React from "react";
 import "../topBar/TopBar.css";
 import Image from "next/image";
 
+
 const TopBar = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
