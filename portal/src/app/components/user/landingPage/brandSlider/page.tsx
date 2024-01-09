@@ -16,7 +16,7 @@ const BrandSlider = () => {
         swipeable={true}
         showIndicators={false}
         showStatus={false}
-        autoPlay={false}
+        autoPlay={true}
         infiniteLoop
         interval={5000}
         showArrows={true}

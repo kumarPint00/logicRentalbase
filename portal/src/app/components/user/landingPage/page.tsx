@@ -10,17 +10,18 @@ import Promotions from './promotions/page';
 import RentalPackages from './rentalPackages/page';
 import WhyRent from './whyRent/page';
 import ReqDocuments from './reqDocuments/page';
-import Testimonial from './testimonial/page';
+// import Testimonial from './testimonial/page';
 import Footer from './footer/page';
 import LatestCars from './latestCars/page';
 import LuxSportsCars from './luxSportsCars.tsx/page';
 import SuvCars from './suvCars/page';
+import TestimonialTwo from './testimonialTwo/page';
 
 const LandingPage = () => {
   return (
     <>
     <Navbar />
-    <TopBar />
+    {/* <TopBar /> */}
     <Example />
     <BrandSlider />
     <HowItWorks />
@@ -32,7 +33,8 @@ const LandingPage = () => {
     <Promotions />
     <RentalPackages />
     <WhyRent />
-    <Testimonial />
+    <TestimonialTwo />
+    {/* <Testimonial /> */}
     <Footer />
     </>
   )
