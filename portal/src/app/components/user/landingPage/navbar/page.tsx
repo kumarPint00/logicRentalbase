@@ -6,7 +6,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import "../navbar/Navbar.css";
 import ExploreIcon from "@mui/icons-material/Explore";
-import TranslateIcon from '@mui/icons-material/Translate';
+import TranslateIcon from "@mui/icons-material/Translate";
+import LanguageIcon from "@mui/icons-material/Language";
 import {
   AppBar,
   Box,
@@ -93,19 +94,61 @@ function Navbar(props: any) {
             <Box p={2} sx={{ display: "flex", alignItems: "center" }}>
               <div className="language">
                 <div className="langIcon">
-                  {/* <Image
-                    src="/earth-globe.png"
+                  <LanguageIcon sx={{ color: "#013049", fontSize: "25px" }} />
+                </div>
+                <Box>
+                  <FormControl>
+                    <NativeSelect
+                      defaultValue="Saudi Arabia"
+                      inputProps={{
+                        name: "language",
+                        id: "uncontrolled-native",
+                      }}
+                      disableUnderline={true}
+                      sx={{ backgroundColor: "white", paddingLeft: "5px" }}
+                    >
+                      <option value="Saudi Arabia">Saudi Arabia</option>
+                      <option value="UAE">UAE</option>
+                    </NativeSelect>
+                  </FormControl>
+                </Box>
+              </div>
+              <div className="currency">
+                <div className="langIcon">
+                  <img
+                    src="./money.png"
                     width={25}
                     height={25}
                     alt="united-kingdom"
                     style={{ color: "white" }}
-                  /> */}
+                  />
+                </div>
+                <Box>
+                  <FormControl>
+                    <NativeSelect
+                      defaultValue="AED"
+                      inputProps={{
+                        name: "language",
+                        id: "uncontrolled-native",
+                      }}
+                      disableUnderline={true}
+                      sx={{ backgroundColor: "white", paddingLeft: "5px" }}
+                    >
+                      <option value="AED">AED</option>
+                      <option value="USD">USD</option>
+                      <option value="INR">INR</option>
+                    </NativeSelect>
+                  </FormControl>
+                </Box>
+              </div>
+              <div className="language">
+                <div className="langIcon">
                   <TranslateIcon sx={{ color: "#013049", fontSize: "20px" }} />
                 </div>
                 <Box>
                   <FormControl>
                     <NativeSelect
-                      defaultValue={30}
+                      defaultValue="English"
                       inputProps={{
                         name: "language",
                         id: "uncontrolled-native",
@@ -119,7 +162,7 @@ function Navbar(props: any) {
                   </FormControl>
                 </Box>
               </div>
-              <Button className="loginBtn" variant="text">
+              <Button className="loginBtn" variant="text" onClick={()=>router.push("/components/admin/dashboard")}>
                 Login
               </Button>
               <Button className="bookCarBtn" variant="contained" size="small">

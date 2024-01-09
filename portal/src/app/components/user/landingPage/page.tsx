@@ -21,7 +21,7 @@ const LandingPage = () => {
   return (
     <>
     <Navbar />
-    <TopBar />
+    {/* <TopBar /> */}
     <Example />
     <BrandSlider />
     <HowItWorks />
