@@ -3,6 +3,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 import SideDrawer from "../sideDrawer/page";
+import UserFeedback from "./UserFeedback";
 
 const drawerWidth = 240;
 
@@ -25,19 +26,19 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
   }),
 }));
 
-const UserFeedback = () => {
+const page = () => {
   const [open, setOpen] = React.useState(true);
 
   return (
     <>
       <Box sx={{ display: "flex" }}>
         <SideDrawer />
-        <Main open={open}  style={{marginTop:"2rem"}}>
-          <h1>User FeedBack</h1>
+        <Main open={open}  style={{marginTop:"3rem"}}>
+          <UserFeedback />
         </Main>
       </Box>
     </>
   );
 };
 
-export default UserFeedback;
+export default page;

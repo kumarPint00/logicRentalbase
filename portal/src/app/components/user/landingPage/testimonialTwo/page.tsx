@@ -27,7 +27,7 @@ const TestimonialTwo = () => {
           What do Our customers say about us?
         </Typography>
       </div>
-      <Container maxWidth="xs">
+      <Container maxWidth="sm">
         <Carousel
           showThumbs={false}
           swipeable={true}

@@ -79,7 +79,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 export default function SideDrawer() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const router = useRouter();
 
@@ -94,14 +94,14 @@ export default function SideDrawer() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{ backgroundColor: "white" }}>
+      <AppBar position="fixed" open={open} sx={{ backgroundColor: "#013049" }}>
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{ mr: 2, ...(open && { display: "none" }), color: "black" }}
+            sx={{ mr: 2, ...(open && { display: "none" }), color: "white" }}
           >
             <MenuIcon />
           </IconButton>
@@ -110,7 +110,7 @@ export default function SideDrawer() {
               variant="h6"
               noWrap
               component="div"
-              sx={{ color: "black", ...(open && { display: "none" }) }}
+              sx={{ color: "white", ...(open && { display: "none" }) }}
             >
               Menu
             </Typography>
@@ -119,7 +119,7 @@ export default function SideDrawer() {
               noWrap
               component="div"
               sx={{
-                color: "black",
+                color: "white",
                 ...(open && { textAlign: "right", width: "100%" }),
                 cursor: "pointer",
               }}
@@ -138,6 +138,7 @@ export default function SideDrawer() {
             width: drawerWidth,
             boxSizing: "border-box",
           },
+          
         }}
         variant="persistent"
         anchor="left"
@@ -150,7 +151,7 @@ export default function SideDrawer() {
             image="/logicLogo.png"
             title="logo"
           />
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton onClick={handleDrawerClose} sx={{color:"#013049"}}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (
@@ -161,7 +162,10 @@ export default function SideDrawer() {
         <Divider />
         <List
           sx={{ padding: "0px" }}
-          onClick={() => router.push("/components/admin/dashboard")}
+          onClick={() => {
+            handleDrawerClose();
+            router.push("/components/admin/dashboard");
+          }}
         >
           <ListItem disablePadding>
             <ListItemButton sx={{ padding: "5px 15px" }}>
@@ -174,7 +178,10 @@ export default function SideDrawer() {
         </List>
         <List
           sx={{ padding: "0px" }}
-          onClick={() => router.push("/components/admin/dashboard/manageCars")}
+          onClick={() => {
+            handleDrawerClose();
+            router.push("/components/admin/dashboard/manageCars");
+          }}
         >
           <ListItem disablePadding>
             <ListItemButton sx={{ padding: "5px 15px" }}>
@@ -187,9 +194,10 @@ export default function SideDrawer() {
         </List>
         <List
           sx={{ padding: "0px" }}
-          onClick={() =>
-            router.push("/components/admin/dashboard/userFeedback")
-          }
+          onClick={() => {
+            handleDrawerClose();
+            router.push("/components/admin/dashboard/userFeedback");
+          }}
         >
           <ListItem disablePadding>
             <ListItemButton sx={{ padding: "5px 15px" }}>
