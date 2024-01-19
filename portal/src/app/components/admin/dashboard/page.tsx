@@ -3,6 +3,7 @@ import React from "react";
 import SideDrawer from "./sideDrawer/page";
 import { Box } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
+import Dashboard from "./Dashboard";
 
 const drawerWidth = 240;
 
@@ -25,19 +26,19 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
   }),
 }));
 
-const Dashboard = () => {
+const page = () => {
   const [open, setOpen] = React.useState(true);
 
   return (
     <>
       <Box sx={{ display: "flex" }}>
         <SideDrawer />
-        <Main open={open}  style={{marginTop:"2rem"}}>
-          <h1>Dashboard</h1>
+        <Main open={open}  style={{marginTop:"3rem"}}>
+          <Dashboard />
         </Main>
       </Box>
     </>
   );
 };
 
-export default Dashboard;
+export default page;

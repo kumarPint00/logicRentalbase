@@ -3,6 +3,9 @@ import React from "react";
 import SideDrawer from "../sideDrawer/page";
 import { Box } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
+import ManageCars from "./ManageCars";
+// import ManageCars from "./ManageCars";
+import "./ManageCars.css";
 
 const drawerWidth = 240;
 
@@ -34,18 +37,18 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-const ManageCars = () => {
+const page = () => {
   const [open, setOpen] = React.useState(true);
   return (
     <>
       <Box sx={{ display: "flex" }}>
         <SideDrawer />
-        <Main open={open} style={{marginTop:"2rem"}}>
-          <h1>Manage Cars</h1>
+        <Main open={open} style={{marginTop:"3rem"}}>
+          <ManageCars />
         </Main>
       </Box>
     </>
   );
 };
 
-export default ManageCars;
+export default page;
