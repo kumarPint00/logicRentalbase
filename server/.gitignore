@@ -1,0 +1,132 @@
+# See https://docs.github.com/en/github/using-git/ignoring-files#create-a-gitignore-file
+
+# Node.js
+logs
+/node_modules
+/coverage
+/.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.log
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.orig
+*.pyc
+*.class
+*.mpp
+*.ppt.pages
+.project
+.metadata
+*.hprof
+.settings/
+.cache/
+.g8/
+.gradle
+/local_storage
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+
+# IDEs and editors
+.idea
+.vscode
+/node_modules
+/.cache
+/.sass-cache
+/bower_components
+/build
+/dist
+
+# Packages
+/package-lock.json
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# IDEs
+.idea
+.vscode
+
+# Testing
+/coverage
+
+# Local Environments
+/env/
+/.env
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+
+# Dependency directories
+/node_modules/
+/public/
+
+# Output directories
+/build/
+/dist/
+/out/
+
+# Next.js build output
+/.next/
+
+# Nuxt.js build / generate output
+/dist/
+/generate/
+/nuxt/
+
+# Gatsby files
+/public/
+/.cache/
+# Image optimize cache
+/
+
+# Next.js build output
+.next/
+
+# Nuxt.js build / generate output
+.nuxt/
+dist/
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+/serverless/
+
+# DynamoDB Local files
+/dynamodb-local/
+
+# fastlane
+/fastlane/report.xml
+/fastlane/Readme.md
+
+# CocoaPods
+/Pods/
+
+# Bundle files
+/!**/
+*.jsbundle
+
+
+
+.env
