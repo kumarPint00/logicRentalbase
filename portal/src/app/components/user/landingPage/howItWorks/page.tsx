@@ -1,7 +1,7 @@
 "use client";
 import { Card, CardMedia, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import "../howItWorks/howItWorks.css";
+import "./HowItWorks.css";
 
 const HowItWorks = () => {
   return (
