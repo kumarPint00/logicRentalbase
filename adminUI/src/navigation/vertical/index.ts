@@ -19,7 +19,9 @@ import CalendarBlankOutline from 'mdi-material-ui/CalendarBlankOutline'
 import PackageVariantClosed from 'mdi-material-ui/PackageVariantClosed'
 import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
 import CheckboxMarkedCircleOutline from 'mdi-material-ui/CheckboxMarkedCircleOutline'
-
+import SettingsIcon from '@mui/icons-material/Settings'
+import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled'
+import LocalOfferIcon from '@mui/icons-material/LocalOffer'
 // ** Type import
 import { VerticalNavItemsType } from 'src/@core/layouts/types'
 
@@ -50,37 +52,39 @@ const navigation = (): VerticalNavItemsType => {
       icon: DotsHorizontal,
       children: [
         {
-          title: 'Settings',
+          title: 'Car',
+          icon: DirectionsCarFilledIcon,
           children: [
             {
-              title: 'View Settings',
-              path: '/catagory/view'
-            },
-
-            {
-              title: 'Add Settings',
-              path: '/catagory/add'
+              title: 'View Car',
+              path: '/product/view'
             },
             {
-              title: 'Update Settings',
-              path: '/catagory/update'
+              title: 'Add Car',
+              path: '/product/add'
+            },
+            {
+              title: 'Update Car',
+              path: '/product/update'
             }
           ]
         },
+
         {
           title: 'Manage Offers',
+          icon: LocalOfferIcon,
           children: [
             {
               title: 'View Offers',
-              path: '/pincode/view'
+              path: '/offers/view'
             },
             {
               title: 'Add Offers',
-              path: '/pincode/add'
+              path: '/offers/add'
             },
             {
               title: 'Update Offers',
-              path: '/pincode/update'
+              path: '/offers/update'
             }
           ]
         },
@@ -102,36 +106,21 @@ const navigation = (): VerticalNavItemsType => {
           ]
         },
         {
-          title: 'Car',
+          title: 'Settings',
+          icon: SettingsIcon,
           children: [
             {
-              title: 'View Car',
-              path: '/product/view'
+              title: 'View Settings',
+              path: '/catagory/view'
+            },
+
+            {
+              title: 'Add Settings',
+              path: '/catagory/add'
             },
             {
-              title: 'Add Car',
-              path: '/product/add'
-            },
-            {
-              title: 'Update Car',
-              path: '/product/update'
-            }
-          ]
-        },
-        {
-          title: 'lookBook',
-          children: [
-            {
-              title: 'View lookBook',
-              path: '/lookBook/view'
-            },
-            {
-              title: 'Add lookBook',
-              path: '/lookBook/add'
-            },
-            {
-              title: 'Update lookBook',
-              path: '/lookBook/update'
+              title: 'Update Settings',
+              path: '/catagory/update'
             }
           ]
         }
@@ -456,7 +445,7 @@ const navigation = (): VerticalNavItemsType => {
         {
           title: 'More',
           path: '/components/more'
-        },
+        }
       ]
     },
     {
@@ -513,15 +502,14 @@ const navigation = (): VerticalNavItemsType => {
         {
           title: 'Input Mask',
           path: '/forms/form-elements/input-mask'
-        },
+        }
       ]
     },
     {
       icon: CubeOutline,
       title: 'Form Layouts',
       path: '/forms/form-layouts'
-    }
-    ,
+    },
     {
       title: 'Form Validation',
       path: '/forms/form-validation',
