@@ -31,14 +31,14 @@ const CardPlanUpgrade = () => {
 
   return (
     <Card>
-      <CardHeader
+      {/* <CardHeader
         title='Upgrade Your Plan'
         action={
           <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>
             <DotsVertical />
           </IconButton>
         }
-      />
+      /> */}
       <CardContent>
         <Typography component='p' variant='caption' sx={{ mb: 3.5 }}>
           Please make the payment to start enjoying all the features of our premium plan as soon as possible.

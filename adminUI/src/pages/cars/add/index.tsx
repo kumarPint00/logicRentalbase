@@ -124,16 +124,16 @@ const handleImageUpload = (event) => {
           </FormControl>              </Grid>
               <Grid item xs={6} sm={3}> 
               <FormControl fullWidth>
-            <InputLabel id="brand-label">Brand</InputLabel>
+            <InputLabel id="brand-label">Model</InputLabel>
             <Select
-              labelId="brand-label"
-              id="brand-select"
-              // value={brand}
-              // onChange={handleBrandChange}
-              label="Brand"
-              {...register('brand')}
+              labelId="model-label"
+              id="model-select"
+              // value={model}
+              // onChange={handlemodelChange}
+              label="model"
+              {...register('model')}
             >
-              <MenuItem value="">Select Brand</MenuItem>
+              <MenuItem value="">Select model</MenuItem>
               {brandsAndModels.map((brandData) => (
                 <MenuItem key={brandData.brand} value={brandData.brand}>
                   {brandData.brand}
@@ -147,16 +147,16 @@ const handleImageUpload = (event) => {
             {/* </Grid> */}
             <Grid item xs={6} sm={3}>
             <FormControl fullWidth>
-            <InputLabel id="brand-label">Brand</InputLabel>
+            <InputLabel id="version-label">Version</InputLabel>
             <Select
-              labelId="brand-label"
-              id="brand-select"
-              // value={brand}
-              // onChange={handleBrandChange}
-              label="Brand"
-              {...register('brand')}
+              labelId="version-label"
+              id="version-select"
+              // value={version}
+              // onChange={handleversionChange}
+              label="version"
+              {...register('version')}
             >
-              <MenuItem value="">Select Brand</MenuItem>
+              <MenuItem value="">Select version</MenuItem>
               {brandsAndModels.map((brandData) => (
                 <MenuItem key={brandData.brand} value={brandData.brand}>
                   {brandData.brand}
@@ -166,16 +166,16 @@ const handleImageUpload = (event) => {
           </FormControl>            </Grid>
             <Grid item xs={6} sm={3}>
             <FormControl fullWidth>
-            <InputLabel id="brand-label">Brand</InputLabel>
+            <InputLabel id="year-label">Year</InputLabel>
             <Select
-              labelId="brand-label"
-              id="brand-select"
-              // value={brand}
-              // onChange={handleBrandChange}
-              label="Brand"
-              {...register('brand')}
+              labelId="year-label"
+              id="year-select"
+              // value={year}
+              // onChange={handleyearChange}
+              label="year"
+              {...register('year')}
             >
-              <MenuItem value="">Select Brand</MenuItem>
+              <MenuItem value="">Select year</MenuItem>
               {brandsAndModels.map((brandData) => (
                 <MenuItem key={brandData.brand} value={brandData.brand}>
                   {brandData.brand}
@@ -203,16 +203,16 @@ const handleImageUpload = (event) => {
           <Grid container spacing={5}>
             <Grid item xs={12} sm={3}>
             <FormControl fullWidth>
-            <InputLabel id="brand-label">Brand</InputLabel>
+            <InputLabel id="colour-label">Available Colours</InputLabel>
             <Select
-              labelId="brand-label"
-              id="brand-select"
-              // value={brand}
-              // onChange={handleBrandChange}
-              label="Brand"
-              {...register('brand')}
+              labelId="colour-label"
+              id="colour-select"
+              // value={colour}
+              // onChange={handlecolourChange}
+              label="colour"
+              {...register('colour')}
             >
-              <MenuItem value="">Select Brand</MenuItem>
+              <MenuItem value="">Select colour</MenuItem>
               {brandsAndModels.map((brandData) => (
                 <MenuItem key={brandData.brand} value={brandData.brand}>
                   {brandData.brand}

@@ -95,7 +95,7 @@ const CRMDashboard = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
+        {/* <Grid item xs={12} md={6} lg={4}>
           <CrmUpgradePlan />
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
@@ -103,7 +103,7 @@ const CRMDashboard = () => {
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <CrmDeveloperMeetup />
-        </Grid>
+        </Grid> */}
       </Grid>
     </ApexChartWrapper>
   )

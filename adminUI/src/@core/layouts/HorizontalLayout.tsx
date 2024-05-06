@@ -157,7 +157,7 @@ const HorizontalLayout = (props: LayoutProps) => {
       </DatePickerWrapper>
 
       {/* Customizer */}
-      {themeConfig.disableCustomizer || hidden ? null : <Customizer />}
+      {/* {themeConfig.disableCustomizer || hidden ? null : <Customizer />} */}
 
       {/* Scroll to top button */}
       {scrollToTop ? (
