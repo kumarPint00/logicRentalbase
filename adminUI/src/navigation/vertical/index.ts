@@ -118,23 +118,7 @@ const navigation = (): VerticalNavItemsType => {
             }
           ]
         },
-        {
-          title: 'lookBook',
-          children: [
-            {
-              title: 'View lookBook',
-              path: '/lookBook/view'
-            },
-            {
-              title: 'Add lookBook',
-              path: '/lookBook/add'
-            },
-            {
-              title: 'Update lookBook',
-              path: '/lookBook/update'
-            }
-          ]
-        }
+        
       ]
     },
     {

@@ -135,7 +135,7 @@ const ApexScatterChart = () => {
         }
       />
       <CardContent>
-        <ReactApexcharts options={options} series={series} type='scatter' height={400} />
+        <ReactApexcharts options={options} series={series} type='line' height={400} />
       </CardContent>
     </Card>
   )
