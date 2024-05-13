@@ -9,42 +9,33 @@ import ServerSideToolbar from 'src/views/table/data-grid/ServerSideToolbar';
 
 const columns: GridColumns = [
   { field: 'name', headerName: 'Name', width: 150 },
+  { field: 'carName', headerName: 'Car Name', width: 150 },
+  { field: 'startDate', headerName: 'Start Date', width: 150 },
+  { field: 'isNewEnquiry', headerName: 'New Enquiry', width: 150 },
+  { field: 'endDate', headerName: 'End Date', width: 150 },
+  { field: 'pickUpLoc', headerName: 'Pick Up Location', width: 200 },
+  { field: 'dropLocation', headerName: 'Drop Location', width: 200 },
+  { field: 'phoneNumber', headerName: 'Phone Number', width: 150 },
+  { field: 'area', headerName: 'Area', width: 150 },
+  { field: 'message', headerName: 'Message', width: 200 },
+  { field: 'deliveryMode', headerName: 'Delivery Mode', width: 150 },
+  { field: 'city', headerName: 'City', width: 150 },
+  { field: 'email', headerName: 'Email', width: 150 },
+  { field: 'packages', headerName: 'Packages', width: 150 },
   { field: 'brand', headerName: 'Brand', width: 150 },
   { field: 'model', headerName: 'Model', width: 150 },
-  { field: 'interiorColor', headerName: 'Interior Color', width: 150 },
-  { field: 'exteriorColor', headerName: 'Exterior Color', width: 150 },
-  { field: 'year', headerName: 'Year', width: 150 },
-  { field: 'category', headerName: 'Category', width: 150 },
-  { field: 'location', headerName: 'Location', width: 150 },
-  { field: 'vehicleType', headerName: 'Vehicle Type', width: 150 },
-  { field: 'featuredCar', headerName: 'Featured Car', width: 150 },
-  { field: 'status', headerName: 'Status', width: 150 },
-  { field: 'services', headerName: 'Services', width: 200 },
-  { field: 'insurranceDetails.strandardInsurrance.sIprice', headerName: 'Standard Insurance Price', width: 200 },
-  { field: 'insurranceDetails.fullInsurrance.fIprice', headerName: 'Full Insurance Price', width: 200 },
-  { field: 'description', headerName: 'Description', width: 200 },
-  { field: 'packageDetails.securityDeposit', headerName: 'Security Deposit', width: 200 },
-  { field: 'packageDetails.ExcessClaimAmount', headerName: 'Excess Claim Amount', width: 200 },
-  { field: 'packageDetails.paymentMethods.creditCard', headerName: 'Credit Card Payment Method', width: 200 },
-  { field: 'carFeatures.transmission', headerName: 'Transmission', width: 200 },
-  { field: 'carFeatures.cruiseControl', headerName: 'Cruise Control', width: 150 },
-  { field: 'carFeatures.engineCapacity', headerName: 'Engine Capacity', width: 200 },
-  { field: 'carFeatures.luggageBootCapacity', headerName: 'Luggage Boot Capacity', width: 200 },
-  { field: 'carFeatures.engineSize', headerName: 'Engine Size', width: 200 },
-  { field: 'carFeatures.bluetooth', headerName: 'Bluetooth', width: 200 },
-  { field: 'carFeatures.aux', headerName: 'Auxiliary Input', width: 200 },
-  { field: 'carFeatures.seater', headerName: 'Seater Capacity', width: 200 },
-  { field: 'carFeatures.navigation', headerName: 'Navigation', width: 200 },
-  { field: 'carFeatures.parkingSense', headerName: 'Parking Sense', width: 200 },
-  { field: 'carFeatures.appleCarPlay', headerName: 'Apple CarPlay', width: 150 },
-  { field: 'carFeatures.isoFix', headerName: 'ISO Fix', width: 150 },
-  { field: 'carFeatures.sunRoof', headerName: 'Sunroof', width: 150 },
-  { field: 'carFeatures.pushButton', headerName: 'Push Button Start', width: 150 },
-  { field: 'carFeatures.lcd', headerName: 'LCD Display', width: 150 },
-  { field: 'carFeatures.rearCamera', headerName: 'Rear Camera', width: 150 },
+  { field: 'enquiryType', headerName: 'Enquiry Type', width: 150 },
+  { field: 'preferredContact', headerName: 'Preferred Contact', width: 150 },
+  { field: 'budget', headerName: 'Budget', width: 150 },
+  { field: 'additionalRequirements', headerName: 'Additional Requirements', width: 200 },
+  { field: 'source', headerName: 'Source', width: 150 },
+  { field: 'promotionalCode', headerName: 'Promotional Code', width: 150 },
+  { field: 'preferredLanguage', headerName: 'Preferred Language', width: 150 },
+  { field: 'bookingCreated', headerName: 'Booking Created', width: 200 },
+  { field: 'bookingUpdated', headerName: 'Booking Updated', width: 200 },
 ];
 
-const CarTable = () => {
+const EnquiryTable = () => {
   const [page, setPage] = useState(0);
   const [total, setTotal] = useState<number>(0);
   const [sort, setSort] = useState('asc');
@@ -60,14 +51,14 @@ const CarTable = () => {
   const fetchTableData = useCallback(
     async (sort: string, q: string, column: string) => {
       await axios
-  .get('/api/cars', {
+       .get('/api/enquiries', {
           params: {
             q,
             sort,
             column,
           },
         })
-  .then((res) => {
+       .then((res) => {
           setTotal(res.data.total);
           setRows(loadServerRows(page, res.data.data));
         });
@@ -120,4 +111,4 @@ const CarTable = () => {
   );
 };
 
-export default CarTable;
+export default EnquiryTable;
